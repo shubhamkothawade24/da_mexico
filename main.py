@@ -46,7 +46,7 @@ def wrangle(filepath):
 # 2. Load and Combine Data
 # -------------------------------
 def load_data():
-    files = glob("data/mexico-city-real-estate-*.csv")
+    files = glob("mexico-city-real-estate-*.csv")
     frames = [wrangle(file) for file in files]
     df = pd.concat(frames, ignore_index=True)
     return df
